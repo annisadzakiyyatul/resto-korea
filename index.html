@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F5F8FF">
+
+    <title>Seoul Bites - Taste Korea in Every Bite!</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./game.css">
+</head>
+
+<body>
+
+<!-- =====================================
+     HEADER
+====================================== -->
+
+<header class="site-header">
+    <a class="brand" href="#beranda">
+        <span class="brand-mark">🥢</span>
+        <span>
+            <strong>Seoul Bites</strong>
+            <small>Taste Korea in Every Bite!</small>
+        </span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#lokasi">Lokasi</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="history-btn" id="historyButton" type="button">
+            🧾 Riwayat
+        </button>
+
+        <button class="cart-btn" id="cartButton" type="button">
+            🛒 Keranjang
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+    <!-- =====================================
+         BERANDA
+    ====================================== -->
+
+    <section class="hero" id="beranda">
+        <div class="hero-copy">
+            <span class="eyebrow">
+                KOREAN FOOD • HAPPY TUMMY
+            </span>
+
+            <h1>
+                Annyeong! Selamat datang di
+                <span>Seoul Bites.</span>
+            </h1>
+
+            <p>
+                Nikmati makanan dan minuman Korea favorit
+                dengan harga bersahabat. Pilih menu,
+                masukkan ke keranjang, lalu checkout
+                langsung di website.
+            </p>
+
+            <a class="primary-link" href="#menu">
+                Lihat Menu ↗
+            </a>
+
+            <div class="hero-notes">
+                <span>💗 Banyak pilihan menu</span>
+                <span>✦ Checkout praktis</span>
+            </div>
+        </div>
+
+        <div class="hero-art">
+            <img
+                src="images/resto.jpg"
+                alt="Suasana restoran Seoul Bites"
+                class="hero-resto-img"
+            >
+
+            <div class="hero-label">
+                <strong>맛있게 드세요!</strong>
+                <small>Selamat makan!</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================
+         MENU
+    ====================================== -->
+
+    <section class="menu-section" id="menu">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">
+                    OUR LITTLE KOREAN KITCHEN
+                </span>
+
+                <h2>
+                    Temukan menu <span>favoritmu</span> ♡
+                </h2>
+
+                <p>
+                    Pilih makanan atau minuman yang kamu suka.
+                </p>
+            </div>
+
+            <label class="search-box">
+                <span>⌕</span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Cari menu..."
+                    aria-label="Cari menu"
+                >
+            </label>
+        </div>
+
+        <div class="filter-row" id="categoryFilters">
+            <button
+                class="filter-chip active"
+                data-category="Semua"
+                type="button"
+            >
+                Semua menu
+            </button>
+
+            <button
+                class="filter-chip"
+                data-category="Makanan"
+                type="button"
+            >
+                🍜 Makanan
+            </button>
+
+            <button
+                class="filter-chip"
+                data-category="Camilan"
+                type="button"
+            >
+                🍢 Camilan
+            </button>
+
+            <button
+                class="filter-chip"
+                data-category="Dessert"
+                type="button"
+            >
+                🍧 Dessert
+            </button>
+
+            <button
+                class="filter-chip"
+                data-category="Minuman"
+                type="button"
+            >
+                🥤 Minuman
+            </button>
+        </div>
+
+        <!-- MENU DITAMPILKAN OLEH JAVASCRIPT -->
+        <div class="menu-grid" id="menuGrid"></div>
+
+        <p class="empty-state" id="emptyState" hidden>
+            Menu tidak ditemukan. Coba kata kunci lain, ya!
+        </p>
+    </section>
+
+    <!-- =====================================
+         TENTANG
+    ====================================== -->
+
+    <section class="about-section" id="tentang">
+        <div class="about-visual">
+            <img
+                src="images/resto.jpg"
+                alt="Suasana interior Seoul Bites"
+                class="about-resto-img"
+            >
+        </div>
+
+        <div class="about-copy">
+            <span class="eyebrow">A LITTLE STORY</span>
+
+            <h2>
+                Kenalan sama <span>Seoul Bites!</span>
+            </h2>
+
+            <p>
+                Seoul Bites adalah warung makanan Korea
+                yang hadir untuk menemani waktu makanmu
+                dengan berbagai menu terinspirasi dari
+                jajanan dan hidangan populer Korea.
+                Kami ingin menghadirkan pengalaman jajan
+                yang seru, praktis, dan tetap ramah di kantong.
+            </p>
+
+            <p>
+                Yuk, pilih menu favoritmu dan rasakan
+                serunya Korean food bersama Seoul Bites!
+            </p>
+        </div>
+    </section>
+
+    <!-- =====================================
+         LOKASI WARUNG
+    ====================================== -->
+
+    <section class="location-section" id="lokasi">
+        <div class="location-copy">
+            <span class="eyebrow">COME SAY HI</span>
+
+            <h2>
+                Temukan kami <span>di sini!</span>
+            </h2>
+
+            <p>
+                📍 Area GOR Kudus, Wergu Wetan,
+                Kudus, Jawa Tengah
+            </p>
+
+            <p>
+                🕒 Senin–Sabtu · 08.00–17.00 WIB<br>
+                🌙 Minggu · Tutup
+            </p>
+
+            <a
+                class="secondary-link"
+                href="https://www.google.com/maps/search/?api=1&query=GOR+Wergu+Wetan+Kudus"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Buka Google Maps ↗
+            </a>
+        </div>
+
+        <div class="map-frame">
+            <iframe
+                title="Peta lokasi GOR Wergu Wetan Kudus"
+                src="https://www.google.com/maps?q=GOR%20Wergu%20Wetan%20Kudus&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+    </section>
+
+</main>
+
+<!-- =====================================
+     FOOTER
+====================================== -->
+
+<footer class="site-footer">
+    <div class="brand footer-brand">
+        <span class="brand-mark">🥢</span>
+
+        <span>
+            <strong>Seoul Bites</strong>
+            <small>Taste Korea in Every Bite!</small>
+        </span>
+    </div>
+
+    <p>Made with ♡ for Korean food lovers.</p>
+
+    <!-- ADMIN MASUK MELALUI HALAMAN LOGIN -->
+    <a href="./admin.html" class="admin-link">
+        ⚙️ Login Admin
+    </a>
+
+    <small>
+        © <span id="currentYear"></span> Seoul Bites
+    </small>
+</footer>
+
+<!-- =====================================
+     OVERLAY
+====================================== -->
+
+<div class="page-overlay" id="pageOverlay" hidden></div>
+
+<!-- =====================================
+     KERANJANG
+====================================== -->
+
+<aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+
+    <div class="cart-header">
+        <div>
+            <span class="eyebrow">YOUR PICKS</span>
+            <h2>Keranjang ♡</h2>
+        </div>
+
+        <button
+            class="close-cart"
+            id="closeCartButton"
+            type="button"
+        >
+            ×
+        </button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+        <span>🛍️</span>
+
+        <strong>Keranjang masih kosong</strong>
+
+        <p>Yuk pilih makanan kesukaanmu!</p>
+
+        <button
+            class="primary-button"
+            id="browseMenuButton"
+            type="button"
+        >
+            Lihat menu
+        </button>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+        <div class="cart-total">
+            <span>Total pesanan</span>
+            <strong id="cartTotal">Rp0</strong>
+        </div>
+
+        <button
+            class="checkout-btn"
+            id="checkoutButton"
+            type="button"
+        >
+            Lanjut Checkout →
+        </button>
+
+        <small>
+            Periksa pesanan sebelum melanjutkan.
+        </small>
+    </div>
+
+</aside>
+
+<!-- =====================================
+     MODAL CHECKOUT
+====================================== -->
+
+<section class="modal" id="checkoutModal" aria-hidden="true">
+
+    <div class="modal-header">
+        <div>
+            <span class="eyebrow">YOUR ORDER</span>
+            <h2>Checkout pesanan</h2>
+        </div>
+
+        <button
+            class="close-modal"
+            data-close-modal
+            type="button"
+        >
+            ×
+        </button>
+    </div>
+
+    <form id="checkoutForm">
+
+        <div class="checkout-layout">
+
+            <!-- DATA PEMBELI -->
+            <div class="checkout-fields">
+
+                <h3>Data pembeli</h3>
+
+                <label for="customerName">
+                    Nama lengkap
+                </label>
+
+                <input
+                    id="customerName"
+                    name="customerName"
+                    type="text"
+                    maxlength="80"
+                    placeholder="Masukkan nama"
+                    required
+                >
+
+                <label for="customerPhone">
+                    Nomor WhatsApp
+                </label>
+
+                <input
+                    id="customerPhone"
+                    name="customerPhone"
+                    type="tel"
+                    maxlength="20"
+                    placeholder="08xxxxxxxxxx"
+                    required
+                >
+
+                <!-- METODE PENERIMAAN -->
+                <label for="deliveryMethod">
+                    Metode penerimaan pesanan
+                </label>
+
+                <select
+                    id="deliveryMethod"
+                    name="deliveryMethod"
+                    required
+                >
+                    <option value="pickup">
+                        Ambil sendiri
+                    </option>
+
+                    <option value="delivery">
+                        Diantar ke alamat
+                    </option>
+                </select>
+
+                <!-- FORM LOKASI GPS -->
+                <div
+                    id="deliveryFields"
+                    class="delivery-fields"
+                    hidden
+                >
+
+                    <h3>📍 Lokasi pengantaran</h3>
+
+                    <p class="delivery-description">
+                        Tekan tombol berikut untuk mengambil
+                        titik lokasi perangkatmu.
+                    </p>
+
+                    <button
+                        id="getCurrentLocation"
+                        class="get-location-button"
+                        type="button"
+                    >
+                        📍 Gunakan Lokasi Saya
+                    </button>
+
+                    <p
+                        id="deliveryLocationStatus"
+                        class="delivery-location-status"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        Lokasi belum dipilih.
+                    </p>
+
+                    <div
+                        id="deliveryLocationResult"
+                        class="delivery-location-result"
+                        hidden
+                    >
+                        <p id="deliveryCoordinates"></p>
+
+                        <a
+                            id="deliveryMapLink"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Lihat lokasi di Google Maps ↗
+                        </a>
+                    </div>
+
+                    <label for="deliveryLandmark">
+                        Patokan / alamat tambahan (opsional)
+                    </label>
+
+                    <textarea
+                        id="deliveryLandmark"
+                        name="deliveryLandmark"
+                        rows="2"
+                        maxlength="300"
+                        placeholder="Contoh: rumah pagar putih, dekat minimarket"
+                    ></textarea>
+
+                    <small class="field-help">
+                        Lokasi GPS akan dikirim ke penjual.
+                        Ongkos kirim dikonfirmasi oleh penjual.
+                    </small>
+
+                </div>
+
+                <label for="orderNote">
+                    Catatan pesanan (opsional)
+                </label>
+
+                <textarea
+                    id="orderNote"
+                    name="orderNote"
+                    rows="2"
+                    maxlength="300"
+                    placeholder="Contoh: saus dipisah"
+                ></textarea>
+
+            </div>
+
+            <!-- RINGKASAN DAN PEMBAYARAN -->
+            <div class="checkout-payment">
+
+                <h3>Ringkasan pesanan</h3>
+
+                <div
+                    id="checkoutSummary"
+                    class="checkout-summary"
+                ></div>
+
+                <div class="checkout-total">
+                    <span>Total pembayaran</span>
+
+                    <strong id="checkoutTotal">
+                        Rp0
+                    </strong>
+                </div>
+
+                <!-- QRIS -->
+                <div class="qris-box">
+
+                    <h3>💜 Pembayaran melalui QRIS</h3>
+
+                    <p>
+                        Scan QRIS menggunakan aplikasi pembayaran
+                        yang mendukung QRIS. Masukkan nominal sesuai
+                        total pembayaran yang tertera.
+                    </p>
+
+                    <img
+                        src="images/qris.jpeg"
+                        alt="QRIS pembayaran Seoul Bites"
+                        class="qris-image"
+                        id="qrisImage"
+                    >
+
+                    <p
+                        class="qris-fallback"
+                        id="qrisFallback"
+                        hidden
+                    >
+                        Gambar QRIS belum ditemukan.
+                        Simpan QRIS sebagai images/qris.jpeg.
+                    </p>
+
+                    <strong>Scan untuk membayar</strong>
+
+                    <p class="qris-amount">
+                        Total:
+                        <strong id="qrisTotal">Rp0</strong>
+                    </p>
+
+                </div>
+
+                <!-- UPLOAD BUKTI -->
+                <label for="paymentProof">
+                    Upload bukti pembayaran
+                </label>
+
+                <input
+                    id="paymentProof"
+                    name="paymentProof"
+                    type="file"
+                    accept="image/png,image/jpeg,image/webp"
+                    required
+                >
+
+                <div
+                    id="proofPreview"
+                    class="proof-preview"
+                ></div>
+
+                <small class="field-help">
+                    Format JPG, PNG, atau WEBP. Maksimal 5 MB.
+                    Bukti akan disimpan dan diperiksa admin.
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="checkout-note">
+            Pesanan akan berstatus Menunggu Verifikasi
+            sampai admin memeriksa pembayaran.
+        </div>
+
+        <button
+            class="checkout-btn submit-order"
+            type="submit"
+        >
+            Simpan Pesanan →
+        </button>
+
+    </form>
+
+</section>
+
+<!-- =====================================
+     MODAL PESANAN BERHASIL
+====================================== -->
+
+<section
+    class="modal success-modal"
+    id="successModal"
+    aria-hidden="true"
+>
+
+    <div class="success-icon">💗</div>
+
+    <span class="eyebrow">THANK YOU!</span>
+
+    <h2>Pesanan berhasil dicatat!</h2>
+
+    <p id="successMessage"></p>
+
+    <div class="checkout-note">
+        Pesanan menunggu verifikasi pembayaran dari admin.
+        Klik WhatsApp untuk mengirim detail pesanan.
+        Foto bukti pembayaran dapat dilampirkan manual
+        pada chat WhatsApp.
+    </div>
+
+    <button
+        class="checkout-btn"
+        id="sendProofButton"
+        type="button"
+    >
+        Kirim Detail Pesanan via WhatsApp ↗
+    </button>
+
+    <button
+        class="plain-button"
+        id="successDoneButton"
+        type="button"
+    >
+        Kembali ke menu
+    </button>
+
+</section>
+
+<!-- =====================================
+     MODAL RIWAYAT PESANAN
+====================================== -->
+
+<section
+    class="modal history-modal"
+    id="historyModal"
+    aria-hidden="true"
+>
+
+    <div class="modal-header">
+        <div>
+            <span class="eyebrow">YOUR ORDERS</span>
+            <h2>Riwayat pesanan</h2>
+        </div>
+
+        <button
+            class="close-modal"
+            data-close-modal
+            type="button"
+        >
+            ×
+        </button>
+    </div>
+
+    <div
+        id="orderHistory"
+        class="order-history"
+    ></div>
+
+    <small class="history-hint">
+        Riwayat tersimpan di browser/perangkat ini.
+    </small>
+
+</section>
+
+<!-- =====================================
+     NOTIFIKASI
+====================================== -->
+
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+></div>
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script src="./game.js"></script>
+
+</body>
+</html>
