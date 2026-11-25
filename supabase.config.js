@@ -4,14 +4,14 @@
  * Isi URL project dan anon/public key dari Project Settings > API.
  * JANGAN masukkan service_role key ke file website.
  */
-(function () {
-  const SUPABASE_URL = 'ISI_PROJECT_URL_DI_SINI';
-  const SUPABASE_ANON_KEY = 'ISI_ANON_PUBLIC_KEY_DI_SINI';
 
-  if (!window.supabase ||
-      SUPABASE_URL.startsWith('ISI_') ||
-      SUPABASE_ANON_KEY.startsWith('ISI_')) {
-    console.warn('Supabase belum dikonfigurasi. Isi supabase-config.js.');
+(function () {
+  const SUPABASE_URL = 'https://mdcniinuzibdredpejuq.supabase.co';
+
+  const SUPABASE_ANON_KEY = 'sb_publishable_N_Yt2JgUFKqxffY9IW85iw_bqqUkQoi';
+
+  if (!window.supabase) {
+    console.error('Library Supabase belum dimuat.');
     window.supabaseClient = null;
     return;
   }
