@@ -1,4 +1,3 @@
-
 /*
  * SEOUL BITES - KONFIGURASI SUPABASE
  * Isi URL project dan anon/public key dari Project Settings > API.
