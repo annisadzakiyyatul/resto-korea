@@ -256,7 +256,7 @@ const menuItems = [
         category: 'Minuman',
         price: 17000,
         description: 'Latte creamy dengan perpaduan rasa labu dan rempah yang hangat.',
-        image: 'images/pumpkin spice latte.jpg'
+        image: 'images/Pumpkin Spice Latte.jpg'
     },
     {
         id: 30,
@@ -311,7 +311,7 @@ const menuItems = [
         category: 'Camilan',
         price: 18000,
         description: 'Roti lembut berisi kentang dan keju dengan rasa gurih dan creamy.',
-        image: 'images/potato cheese bread.jpg'
+        image: 'images/Potato Cheese Bread.jpg'
     },
     {
         id: 37,
