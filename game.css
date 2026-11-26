@@ -1,0 +1,529 @@
+
+/* =====================================
+   ADMIN PAGE
+===================================== */
+
+.admin-page {
+    min-height: 100vh;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #fff0f7, #eee8ff, #e4f3ff);
+    color: #51445f;
+}
+
+.admin-container {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.admin-login-card {
+    width: min(420px, 100%);
+    margin: 65px auto;
+    padding: 32px;
+    border: 1px solid #eadcf4;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.93);
+    box-shadow: 0 12px 35px rgba(120, 90, 150, 0.13);
+}
+
+.admin-login-card h1,
+.admin-header h1 {
+    margin-bottom: 10px;
+    color: #76558e;
+}
+
+.admin-login-card p {
+    margin-bottom: 22px;
+    color: #887a95;
+}
+
+.admin-form-group {
+    margin-bottom: 17px;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.admin-form-group input,
+.admin-toolbar input,
+.admin-toolbar select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #e4d4ef;
+    border-radius: 11px;
+    background: #fff9fd;
+    color: #51445f;
+    font: inherit;
+    outline: none;
+}
+
+.admin-form-group input:focus,
+.admin-toolbar input:focus,
+.admin-toolbar select:focus {
+    border-color: #c18bdc;
+    box-shadow: 0 0 0 3px rgba(193, 139, 220, 0.13);
+}
+
+.admin-error {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #c34d70;
+    font-size: 13px;
+}
+
+/* =====================================
+   TOMBOL ADMIN
+===================================== */
+
+.admin-button {
+    padding: 11px 17px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(120deg, #f5b4d0, #c8b2f3, #a8d8f5);
+    color: #51445f;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-button:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+.admin-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.admin-button-danger {
+    background: #ffe0e8;
+    color: #a34465;
+}
+
+.admin-button-success {
+    background: #dcf6e8;
+    color: #34764f;
+}
+
+/* =====================================
+   HEADER DASHBOARD
+===================================== */
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.admin-header p {
+    color: #887a95;
+}
+
+.admin-actions-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+/* =====================================
+   STATISTIK
+===================================== */
+
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.admin-stat {
+    padding: 20px;
+    border: 1px solid #eadcf4;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.admin-stat span {
+    display: block;
+    color: #887a95;
+    font-size: 13px;
+}
+
+.admin-stat strong {
+    display: block;
+    margin-top: 8px;
+    color: #76558e;
+    font-size: 25px;
+}
+
+/* =====================================
+   PANEL PESANAN
+===================================== */
+
+.admin-panel {
+    padding: 22px;
+    border: 1px solid #eadcf4;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.93);
+}
+
+.admin-panel h2 {
+    color: #76558e;
+    font-size: 21px;
+}
+
+.admin-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 210px;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+/* =====================================
+   DAFTAR PESANAN
+===================================== */
+
+.admin-order-list {
+    min-width: 0;
+}
+
+.admin-order {
+    min-width: 0;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #eadcf4;
+    border-radius: 16px;
+    background: #fffaff;
+}
+
+.admin-order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee3f3;
+}
+
+/* Sesuai elemen strong yang dibuat admin.js */
+.admin-order-header strong {
+    color: #76558e;
+}
+
+.admin-order-header p {
+    margin-top: 5px;
+    color: #887a95;
+    font-size: 12px;
+}
+
+/* =====================================
+   STATUS PESANAN
+===================================== */
+
+.admin-status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #fff0c9;
+    color: #8c6a22;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.admin-status.status-pending {
+    background: #fff0c9;
+    color: #8c6a22;
+}
+
+.admin-status.status-accepted {
+    background: #dcf6e8;
+    color: #34764f;
+}
+
+.admin-status.status-rejected {
+    background: #ffe0e8;
+    color: #a34465;
+}
+
+/* =====================================
+   INFORMASI PELANGGAN
+===================================== */
+
+.admin-customer {
+    margin-bottom: 15px;
+    font-size: 13px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.admin-customer p {
+    margin: 3px 0;
+}
+
+.admin-customer a {
+    color: #7954b8;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   DAFTAR ITEM PESANAN
+===================================== */
+
+.admin-items {
+    padding: 13px;
+    margin: 13px 0;
+    border-radius: 12px;
+    background: #f8f1ff;
+    font-size: 13px;
+}
+
+.admin-items > strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #76558e;
+}
+
+.admin-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+}
+
+.admin-item span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.admin-item span:last-child {
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+/* =====================================
+   TOTAL PESANAN
+===================================== */
+
+.admin-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid #e5d5ef;
+    color: #c45f99;
+    font-weight: 800;
+}
+
+.admin-order-total {
+    margin: 12px 0;
+    color: #c45f99;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* =====================================
+   BUKTI PEMBAYARAN
+===================================== */
+
+.admin-proof {
+    padding: 14px;
+    margin: 13px 0;
+    border: 1px dashed #d5b9e8;
+    border-radius: 12px;
+    background: #fff7fc;
+}
+
+/* Sesuai elemen strong yang dibuat admin.js */
+.admin-proof > strong {
+    color: #76558e;
+}
+
+.admin-proof img {
+    display: block;
+    width: min(260px, 100%);
+    max-height: 300px;
+    margin-top: 10px;
+    border-radius: 10px;
+    object-fit: contain;
+    background: white;
+}
+
+.admin-proof p {
+    margin-top: 8px;
+    color: #887a95;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.admin-proof a {
+    display: inline-block;
+    margin-top: 9px;
+    color: #7954b8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =====================================
+   CATATAN VERIFIKASI
+===================================== */
+
+.admin-verified-note,
+.verification-note {
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    background: #f8f1ff;
+    color: #76558e;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.verification-note strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* =====================================
+   TOMBOL AKSI PESANAN
+===================================== */
+
+.admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.admin-accept,
+.admin-reject {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-accept {
+    background: #dcf6e8;
+    color: #34764f;
+}
+
+.admin-reject {
+    background: #ffe0e8;
+    color: #a34465;
+}
+
+.admin-accept:hover,
+.admin-reject:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+.admin-accept:disabled,
+.admin-reject:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =====================================
+   EMPTY STATE & CATATAN
+===================================== */
+
+.admin-empty {
+    padding: 35px 15px;
+    color: #887a95;
+    text-align: center;
+}
+
+.admin-note {
+    margin-top: 20px;
+    color: #887a95;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+    .admin-page {
+        padding: 20px 12px;
+    }
+
+    .admin-login-card {
+        padding: 23px;
+        margin: 35px auto;
+    }
+
+    .admin-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .admin-stat {
+        padding: 15px;
+    }
+
+    .admin-stat strong {
+        font-size: 22px;
+    }
+
+    .admin-toolbar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .admin-order-info {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-panel {
+        padding: 16px;
+    }
+
+    .admin-order {
+        padding: 15px;
+    }
+
+    .admin-actions-top {
+        width: 100%;
+    }
+
+    .admin-actions-top button {
+        flex: 1;
+    }
+}
+
+@media (max-width: 370px) {
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-order-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-item {
+        flex-wrap: wrap;
+    }
+}
